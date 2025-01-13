@@ -55,6 +55,24 @@ int main()
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+    // Vertices that represent our triangle using Normalized Device Coordinates
+    float vertices[] = {
+            -0.5f, -0.5f, 0.0f,
+            0.5f, -0.5f, 0.0f,
+            0.0f, 0.5f, 0.0f
+    };
+    // vertex buffer object
+    unsigned int vbo;
+    // creates one or more buffer objects
+    glGenBuffers(1, &vbo);
+    // binds a buffer type object to the current buffer type target
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+
+
+
+
+
+
     // Create a render loop
     while (!glfwWindowShouldClose(window))
     {
